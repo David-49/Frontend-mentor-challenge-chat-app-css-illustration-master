@@ -1,0 +1,25 @@
+$paragraphe: hsl(270, 7%, 64%);
+$msgLeft: hsl(276, 55%, 52%);
+$msgRight: hsl(271, 15%, 43%);
+$titre: hsl(271, 36%, 24%);
+$placeHolder: hsl(206, 6%, 79%);
+$subHeading: hsl(276, 100%, 81%);
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  width: 100%;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
