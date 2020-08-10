@@ -15,7 +15,7 @@ function processHTML() {
 }
 
 function processIMG() {
-  return src("src/images/*+(png|jpg|jpeg|svg|gif)")
+  return src("src/images/*.+(png|jpg|jpeg|svg|gif)")
     .pipe(
       cache(
         imagemin({
