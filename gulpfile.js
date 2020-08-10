@@ -5,15 +5,24 @@ const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const cssnano = require("cssnano");
 const rename = require("gulp-rename");
-const newer = require("gulp-newer");
+//const newer = require("gulp-newer");
+const modifyHREF = require("gulp-processhtml");
+const cache = require("gulp-cache");
+const imagemin = require("gulp-imagemin");
 
 function processHTML() {
-  return src("src/*.html").pipe(dest("dist"));
+  return src("src/*.html").pipe(modifyHREF()).pipe(dest("dist"));
 }
 
 function processIMG() {
-  return src("src/images/*")
-    .pipe(newer("dist/images/*"))
+  return src("src/images/*+(png|jpg|jpeg|svg|gif)")
+    .pipe(
+      cache(
+        imagemin({
+          interlaced: true,
+        })
+      )
+    )
     .pipe(dest("dist/images"));
 }
 
@@ -38,7 +47,8 @@ function clean() {
 
 exports.default = function () {
   watch(
-    "src/sass/*.scss",
+    ["src/index.html", "src/sass/*.scss"],
+    { ignoreInitial: false },
     series(clean, parallel(processHTML, css, processIMG))
   );
 };
