@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/b51ebbfc71.js"
+      crossorigin="anonymous"
+    ></script>
     <!-- displays site properly based on user's device -->
 
     <link
@@ -20,14 +24,99 @@
     <title>Frontend Mentor | Chat App CSS</title>
   </head>
   <body>
-    Samuel Green Available to Walk That sounds great. I’d be happy with that.
-    Could you send over some pictures of your dog, please? Here are a few
-    pictures. She’s a happy girl! Can you make it? She looks so happy! The time
-    we discussed works. How long shall I take her out for? 30 minute walk $29 1
-    hour walk $49 Type a message… Simple booking Stay in touch with our dog
-    walkers through the chat interface. This makes it easy to discuss
-    arrangements and make bookings. Once the walk has been completed you can
-    rate your walker and book again all through the chat.
+    <div class="content">
+      <div class="mockup-iphone">
+        <div class="header">
+          <div class="encoche"></div>
+          <i class="fas fa-chevron-left"></i>
+          <img
+            src="images/avatar.jpg"
+            alt="Profile photo"
+            class="profile-image"
+          />
+          <div class="info-person">
+            <p class="name">
+              Samuel Green
+            </p>
+            <p class="status">
+              Available to Walk
+            </p>
+          </div>
+          <div class="menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <div class="msg-container">
+          <p class="message msg-received">
+            That sounds great. I’d be happy with that.
+          </p>
+          <p class="message msg-received">
+            Could you send over some pictures of your dog, please?
+          </p>
+          <div class="img-send-bloc">
+            <img
+              src="images/dog-image-1.jpg"
+              alt="Dog photo"
+              class="img-send"
+            />
+            <img
+              src="images/dog-image-2.jpg"
+              alt="Dog photo"
+              class="img-send"
+            />
+            <img
+              src="images/dog-image-3.jpg"
+              alt="Dog photo"
+              class="img-send"
+            />
+          </div>
+          <p class="message msg-send">
+            Here are a few pictures. She’s a happy girl!
+          </p>
+          <p class="message msg-send">Can you make it?</p>
+          <p class="message msg-received">
+            She looks so happy! The time we discussed works. How long shall I
+            take her out for?
+          </p>
+          <div class="walk-info">
+            <div>
+              <input type="radio" name="" id="radio-1" />
+              <label for="radio-1"></label>
+              <p class="walk-time">30 minute walk</p>
+            </div>
+
+            <p class="price">$29</p>
+          </div>
+          <div class="walk-info">
+            <div>
+              <input type="radio" name="" id="radio-2" />
+              <label for="radio-2"></label>
+              <p class="walk-time">1 hour walk</p>
+            </div>
+            <p class="price">$49</p>
+          </div>
+        </div>
+        <form action="">
+          <textarea name="" id="" placeholder="Type a message..."></textarea>
+          <button class="btn">
+            <i class="fas fa-chevron-circle-right"></i>
+          </button>
+        </form>
+      </div>
+      <div class="presentation">
+        <h1 class="title">
+          Simple booking
+        </h1>
+        <div class="paragraphe">
+          Stay in touch with our dog walkers through the chat interface. This
+          makes it easy to discuss arrangements and make bookings. Once the walk
+          has been completed you can rate your walker and book again all through
+          the chat.
+        </div>
+      </div>
+    </div>
 
     <div class="attribution">
       Challenge by

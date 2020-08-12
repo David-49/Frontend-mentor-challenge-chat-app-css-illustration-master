@@ -29,5 +29,16 @@
     "gulp-processhtml": "^1.2.0",
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^4.1.0"
-  }
+  },
+  "browserslist": [
+    "last 2 versions",
+    "safari 5",
+    "ie 6",
+    "ie 7",
+    "ie 8",
+    "ie 9",
+    "opera 12.1",
+    "ios 6",
+    "android 4"
+  ]
 }
