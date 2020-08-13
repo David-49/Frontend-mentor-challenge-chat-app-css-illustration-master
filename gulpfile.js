@@ -30,7 +30,7 @@ function processIMG() {
 function js() {
   return src("src/js/*.js")
     .pipe(gulpIf("*.js", terser()))
-    .pipe(dest("dist/js"));
+    .pipe(dest("dist/JS"));
 }
 
 function css() {
