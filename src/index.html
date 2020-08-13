@@ -53,13 +53,13 @@
           </div>
         </div>
         <div class="msg-container">
-          <p class="message msg-received">
+          <p class="message msg-received" id="msg-1" style="opacity: 0;">
             That sounds great. I’d be happy with that.
           </p>
-          <p class="message msg-received">
+          <p class="message msg-received" id="msg-2" style="opacity: 0;">
             Could you send over some pictures of your dog, please?
           </p>
-          <div class="img-send-bloc">
+          <div class="img-send-bloc" id="msg-3" style="opacity: 0;">
             <img
               src="images/dog-image-1.jpg"
               alt="Dog photo"
@@ -76,15 +76,17 @@
               class="img-send"
             />
           </div>
-          <p class="message msg-send">
+          <p class="message msg-send" id="msg-4" style="opacity: 0;">
             Here are a few pictures. She’s a happy girl!
           </p>
-          <p class="message msg-send">Can you make it?</p>
-          <p class="message msg-received">
+          <p class="message msg-send" id="msg-5" style="opacity: 0;">
+            Can you make it?
+          </p>
+          <p class="message msg-received" id="msg-6" style="opacity: 0;">
             She looks so happy! The time we discussed works. How long shall I
             take her out for?
           </p>
-          <div class="walk-info">
+          <div class="walk-info" id="msg-7" style="opacity: 0;">
             <div>
               <input type="radio" name="" id="radio-1" />
               <label for="radio-1"></label>
@@ -93,7 +95,7 @@
 
             <p class="price">$29</p>
           </div>
-          <div class="walk-info">
+          <div class="walk-info" id="msg-8" style="opacity: 0;">
             <div>
               <input type="radio" name="" id="radio-2" />
               <label for="radio-2"></label>
@@ -128,5 +130,6 @@
         >Frontend Mentor</a
       >. Coded by <a href="https://daviddognin.com/">David DOGNIN</a>.
     </div>
+    <script src="JS/apps.js"></script>
   </body>
 </html>

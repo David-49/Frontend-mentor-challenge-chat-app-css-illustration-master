@@ -256,3 +256,6 @@ form {
     width: 40%; }
   .price {
     font-size: 1.2rem; } }
+
+.transition-opacity {
+  transition: opacity 1s; }
