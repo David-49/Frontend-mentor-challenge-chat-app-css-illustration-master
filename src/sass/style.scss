@@ -1,3 +1,4 @@
+//variable
 $paragraphe: hsl(270, 7%, 64%);
 $msgLeft: hsl(276, 55%, 52%);
 $msgRight: hsl(271, 15%, 43%);
@@ -8,16 +9,21 @@ $subHeading: linear-gradient(
   rgba(233, 66, 255, 1) 0%,
   rgba(136, 56, 240, 1) 73%
 );
-$gradient2: linear-gradient(
+$walkInfoColor: linear-gradient(
   90deg,
   rgba(233, 66, 255, 1) 0%,
   rgba(136, 56, 240, 1) 73%
 );
-$grandientMagenta: hsl(293, 100%, 63%);
-$gradientViolet: hsl(264, 100%, 61%);
+$forme1: linear-gradient(
+  238deg,
+  rgba(233, 66, 255, 1) 0%,
+  rgba(136, 56, 240, 1) 73%
+);
+$form2: #f7f5fa;
 $appBakground: hsl(270, 20%, 96%);
 $submitBtnBackground: hsl(271, 36%, 24%);
 $radioBtnOutline: hsl(289, 100%, 72%);
+$marginMsg: 5px;
 
 * {
   padding: 0;
@@ -33,12 +39,18 @@ html {
 
 html,
 body {
-  height: 100vh;
+  height: 100%;
+  overflow-x: hidden;
 }
 
 .attribution {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
+  position: absolute;
   text-align: center;
+  width: 100%;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
   a {
     text-decoration: none;
     color: hsl(228, 45%, 44%);
@@ -47,13 +59,18 @@ body {
 
 .content {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  height: 100%;
+  width: 60%;
+  margin: auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .mockup-iphone {
-  width: 18%;
+  min-width: 320px;
+  max-width: 320px;
   border: solid white 15px;
   border-radius: 30px;
   box-shadow: 1px 30px 73px -4px rgba(0, 0, 0, 0.37);
@@ -73,11 +90,7 @@ body {
   padding: 30px 10px 10px 10px;
   position: relative;
   border-radius: 20px 20px 8px 8px;
-  box-shadow: 0 1.5px 5.9px -82px rgba(0, 0, 0, 0.276),
-    0 3.7px 14.9px -82px rgba(0, 0, 0, 0.395),
-    0 7.6px 30.5px -82px rgba(0, 0, 0, 0.495),
-    0 15.7px 62.8px -82px rgba(0, 0, 0, 0.614),
-    0 43px 172px -82px rgba(0, 0, 0, 0.89);
+  box-shadow: -2px 14px 15px -16px rgba(0, 0, 0, 0.32);
 }
 
 .encoche {
@@ -137,9 +150,10 @@ body {
 }
 
 .message {
-  max-width: 55%;
+  max-width: 65%;
   padding: 12px;
-  margin: 5px;
+  margin: $marginMsg;
+  font-size: 1rem;
 }
 
 .msg-received {
@@ -165,7 +179,7 @@ body {
 .img-send-bloc {
   display: flex;
   justify-content: flex-end;
-  margin: 5px;
+  margin: $marginMsg;
   img {
     width: 20%;
     border-radius: 15%;
@@ -174,14 +188,14 @@ body {
 }
 
 .walk-info {
-  width: 80%;
+  width: 78%;
   padding: 15px;
-  margin: 5px;
+  margin: $marginMsg;
   display: flex;
   align-items: center;
   justify-content: space-between;
   color: white;
-  background: $gradient2;
+  background: $walkInfoColor;
   div {
     display: flex;
     align-items: center;
@@ -221,7 +235,7 @@ form {
     display: flex;
     align-items: center;
     width: 100%;
-    //padding: 15px 0 0 15px;
+    padding: 15px 0 0 15px;
     border-radius: 50px;
     border: none;
     resize: none;
@@ -237,32 +251,91 @@ form {
   top: 50%;
   transform: translateY(-50%);
   border: none;
-  background-color: transparent;
-}
-
-.btn .fa-chevron-circle-right {
-  background-color: transparent;
-  color: $submitBtnBackground;
+  background-color: $submitBtnBackground;
   border-radius: 100%;
-  font-size: 2.8rem;
+  color: white;
+  width: 30px;
+  height: 30px;
+  i {
+    font-size: 1.5rem;
+  }
 }
 
-.field {
-  margin: 10px;
-  padding: 10px;
-  background-color: #fff;
-  border-radius: 50px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.presentation {
+  width: 100%;
+  margin-left: 15%;
 }
 
-.field p {
-  color: #6f6f6f;
-  margin-left: 10px;
+.title {
+  font-size: 4rem;
   letter-spacing: 2px;
+  color: $titre;
+  font-weight: 500;
+  white-space: nowrap;
 }
 
-.field .fa-chevron-circle-right {
-  font-size: 3rem;
+.paragraphe {
+  font-size: 1.6rem;
+  color: $paragraphe;
+  line-height: 30px;
+  margin-top: 6%;
+}
+
+.forme1 {
+  position: absolute;
+  width: 30%;
+  height: 90vh;
+  background: $forme1;
+  z-index: -1;
+  top: 0;
+  left: -5%;
+  border-radius: 0 0 500px 500px;
+}
+
+.forme2 {
+  position: absolute;
+  bottom: 0;
+  right: -10%;
+  width: 35%;
+  height: 85%;
+  background-color: $form2;
+  z-index: -1;
+  border-radius: 500px 500px 0 0;
+}
+
+@media screen and (max-width: 875px) {
+  .content {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .mockup-iphone {
+    box-shadow: -5px 10px 44px -24px rgba(0, 0, 0, 0.75);
+    min-width: 280px;
+    max-width: 280px;
+  }
+
+  .header {
+    padding: 20px 10px 10px 10px;
+  }
+
+  .encoche {
+    height: 25px;
+  }
+
+  .presentation {
+    margin: 30px 0 50px 0;
+    text-align: center;
+    width: 80%;
+  }
+
+  .forme1,
+  .forme2 {
+    height: 50vh;
+    width: 40%;
+  }
+
+  .price {
+    font-size: 1.2rem;
+  }
 }

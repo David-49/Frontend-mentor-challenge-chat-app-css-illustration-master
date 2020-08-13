@@ -10,23 +10,34 @@ html {
 
 html,
 body {
-  height: 100vh; }
+  height: 100%;
+  overflow-x: hidden; }
 
 .attribution {
-  font-size: 1.1rem;
-  text-align: center; }
+  font-size: 1.3rem;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%); }
   .attribution a {
     text-decoration: none;
     color: #3e52a3; }
 
 .content {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  height: 100%; }
+  width: 60%;
+  margin: auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%); }
 
 .mockup-iphone {
-  width: 18%;
+  min-width: 320px;
+  max-width: 320px;
   border: solid white 15px;
   border-radius: 30px;
   box-shadow: 1px 30px 73px -4px rgba(0, 0, 0, 0.37);
@@ -44,7 +55,7 @@ body {
   padding: 30px 10px 10px 10px;
   position: relative;
   border-radius: 20px 20px 8px 8px;
-  box-shadow: 0 1.5px 5.9px -82px rgba(0, 0, 0, 0.276), 0 3.7px 14.9px -82px rgba(0, 0, 0, 0.395), 0 7.6px 30.5px -82px rgba(0, 0, 0, 0.495), 0 15.7px 62.8px -82px rgba(0, 0, 0, 0.614), 0 43px 172px -82px rgba(0, 0, 0, 0.89); }
+  box-shadow: -2px 14px 15px -16px rgba(0, 0, 0, 0.32); }
 
 .encoche {
   background-color: white;
@@ -94,9 +105,10 @@ body {
     border-radius: 50%; }
 
 .message {
-  max-width: 55%;
+  max-width: 65%;
   padding: 12px;
-  margin: 5px; }
+  margin: 5px;
+  font-size: 1rem; }
 
 .msg-received {
   background-color: #ede5f2;
@@ -124,7 +136,7 @@ body {
     margin: 5px; }
 
 .walk-info {
-  width: 80%;
+  width: 78%;
   padding: 15px;
   margin: 5px;
   display: flex;
@@ -164,6 +176,7 @@ form {
     display: flex;
     align-items: center;
     width: 100%;
+    padding: 15px 0 0 15px;
     border-radius: 50px;
     border: none;
     resize: none; }
@@ -176,27 +189,70 @@ form {
   top: 50%;
   transform: translateY(-50%);
   border: none;
-  background-color: transparent; }
-
-.btn .fa-chevron-circle-right {
-  background-color: transparent;
-  color: #3e2753;
+  background-color: #3e2753;
   border-radius: 100%;
-  font-size: 2.8rem; }
+  color: white;
+  width: 30px;
+  height: 30px; }
+  .btn i {
+    font-size: 1.5rem; }
 
-.field {
-  margin: 10px;
-  padding: 10px;
-  background-color: #fff;
-  border-radius: 50px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center; }
+.presentation {
+  width: 100%;
+  margin-left: 15%; }
 
-.field p {
-  color: #6f6f6f;
-  margin-left: 10px;
-  letter-spacing: 2px; }
+.title {
+  font-size: 4rem;
+  letter-spacing: 2px;
+  color: #3e2753;
+  font-weight: 500;
+  white-space: nowrap; }
 
-.field .fa-chevron-circle-right {
-  font-size: 3rem; }
+.paragraphe {
+  font-size: 1.6rem;
+  color: #a39daa;
+  line-height: 30px;
+  margin-top: 6%; }
+
+.forme1 {
+  position: absolute;
+  width: 30%;
+  height: 90vh;
+  background: linear-gradient(238deg, #e942ff 0%, #8838f0 73%);
+  z-index: -1;
+  top: 0;
+  left: -5%;
+  border-radius: 0 0 500px 500px; }
+
+.forme2 {
+  position: absolute;
+  bottom: 0;
+  right: -10%;
+  width: 35%;
+  height: 85%;
+  background-color: #f7f5fa;
+  z-index: -1;
+  border-radius: 500px 500px 0 0; }
+
+@media screen and (max-width: 875px) {
+  .content {
+    flex-direction: column;
+    width: 100%; }
+  .mockup-iphone {
+    box-shadow: -5px 10px 44px -24px rgba(0, 0, 0, 0.75);
+    min-width: 280px;
+    max-width: 280px; }
+  .header {
+    padding: 20px 10px 10px 10px; }
+  .encoche {
+    height: 25px; }
+  .presentation {
+    margin: 30px 0 50px 0;
+    text-align: center;
+    width: 80%; }
+  .forme1,
+  .forme2 {
+    height: 50vh;
+    width: 40%; }
+  .price {
+    font-size: 1.2rem; } }

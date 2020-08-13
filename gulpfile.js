@@ -27,7 +27,7 @@ function processIMG() {
 }
 
 function css() {
-  return src(["src/sass/*.scss", "!src/sass/breakpoints.scss"])
+  return src("src/sass/*.scss")
     .pipe(sass().on("error", sass.logError))
     .pipe(dest("src/css"))
     .pipe(postcss([autoprefixer(), cssnano()]))
