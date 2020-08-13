@@ -1,0 +1,1 @@
+window.onload=function(){const t=["500","1000","1500","2000","2500","3000","3500","4000"];for(let o=1;o<=8;o++)setTimeout((function(){document.getElementById("msg-"+o).style.opacity=1,document.getElementById("msg-"+o).classList.toggle("transition-opacity")}),t[o-1]),console.log(t[o-1])};
